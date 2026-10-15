@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Toyota NOA Centro | Concesionaria</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,Helvetica,sans-serif}
+body{color:#222;background:#fff;line-height:1.6}
+.container{width:90%;max-width:1100px;margin:auto}
+header{background:#000;color:#fff;position:sticky;top:0;z-index:10}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:15px 0}
+.logo{font-size:22px;font-weight:bold}
+.logo span{color:#EB0A1E}
+nav ul{display:flex;gap:20px;list-style:none}
+nav a{color:#fff;text-decoration:none;font-size:15px}
+nav a:hover{color:#EB0A1E}
+.hero{background:linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)),url("https://images.unsplash.com/photo-1494976388531-d1058494cdd8?auto=format&fit=crop&w=1600&q=80") center/cover;color:#fff;text-align:center;padding:120px 20px}
+.hero h1{font-size:42px;margin-bottom:15px}
+.hero p{font-size:18px;margin-bottom:25px}
+.btn{display:inline-block;background:#EB0A1E;color:#fff;padding:13px 28px;text-decoration:none;border-radius:4px;font-weight:bold;border:none;cursor:pointer}
+.btn:hover{background:#c00818}
+section{padding:70px 0}
+h2{text-align:center;font-size:32px;margin-bottom:10px}
+.subtitle{text-align:center;color:#666;margin-bottom:40px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:25px}
+.card{border:1px solid #ddd;border-radius:8px;overflow:hidden;box-shadow:0 3px 10px rgba(0,0,0,.08)}
+.card img{width:100%;height:180px;object-fit:cover}
+.card-body{padding:20px}
+.card h3{margin-bottom:8px}
+.price{color:#EB0A1E;font-weight:bold;cursor:pointer;text-decoration:underline}
+.services{background:#f5f5f5}
+.service{background:#fff;padding:25px;border-radius:8px;border-left:5px solid #EB0A1E}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+.about img{width:100%;border-radius:8px}
+.contact{background:#000;color:#fff}
+form{max-width:600px;margin:auto}
+input,select,textarea{width:100%;padding:12px;margin-bottom:15px;border:none;border-radius:4px}
+footer{background:#111;color:#bbb;text-align:center;padding:25px;font-size:14px}
+.modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,.7);z-index:100;align-items:center;justify-content:center;padding:20px}
+.modal.open{display:flex}
+.modal-box{background:#fff;max-width:520px;width:100%;border-radius:10px;padding:30px;position:relative}
+.modal-box h3{color:#EB0A1E;margin-bottom:10px}
+.modal-box ul{margin:15px 0 20px 20px}
+.close{position:absolute;top:10px;right:15px;background:none;border:none;font-size:26px;cursor:pointer;color:#666}
+@media(max-width:768px){.nav{flex-direction:column;gap:12px}nav ul{flex-wrap:wrap;justify-content:center}.hero h1{font-size:30px}.about{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header><div class="container nav"><div class="logo">Toyota <span>NOA Centro</span></div><nav><ul><li><a href="#inicio">Inicio</a></li><li><a href="#modelos">Modelos</a></li><li><a href="#servicios">Servicios</a></li><li><a href="#nosotros">Nosotros</a></li><li><a href="#contacto">Contacto</a></li></ul></nav></div></header>
+<section class="hero" id="inicio"><h1>Tu próximo Toyota te está esperando</h1><p>Autos 0 km, usados seleccionados, financiación y servicio técnico especializado.</p><a href="#modelos" class="btn">Ver modelos</a></section>
+<section id="modelos"><div class="container"><h2>Modelos destacados</h2><p class="subtitle">Tocá en “Consultar precio” para ver promociones, descuentos y cuotas.</p><div class="cards">
+<div class="card"><img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=800&q=80" alt="Toyota Corolla"><div class="card-body"><h3>Toyota Corolla</h3><p>Sedán moderno, eficiente y equipado con tecnología de seguridad.</p><p class="price" onclick="openModal('Corolla')">Consultar precio</p></div></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&w=800&q=80" alt="Toyota Hilux"><div class="card-body"><h3>Toyota Hilux</h3><p>Pick-up robusta, ideal para trabajo, ciudad y aventura.</p><p class="price" onclick="openModal('Hilux')">Consultar precio</p></div></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1511919884226-fd3cad34687c?auto=format&fit=crop&w=800&q=80" alt="Toyota Corolla Cross"><div class="card-body"><h3>Toyota Corolla Cross</h3><p>SUV versátil, cómodo y preparado para toda la familia.</p><p class="price" onclick="openModal('Corolla Cross')">Consultar precio</p></div></div>
+</div></div></section>
+<section class="services" id="servicios"><div class="container"><h2>Nuestros servicios</h2><p class="subtitle">Acompañamos al cliente antes, durante y después de la compra.</p><div class="cards">
+<div class="service"><h3>Venta de 0 km</h3><p>Amplia disponibilidad de modelos Toyota con asesoramiento personalizado.</p></div>
+<div class="service"><h3>Usados seleccionados</h3><p>Vehículos revisados, con historial verificado y garantía del concesionario.</p></div>
+<div class="service"><h3>Financiación</h3><p>Planes de pago, créditos automotrices y opciones de ahorro previo.</p></div>
+<div class="service"><h3>Service oficial</h3><p>Mantenimiento preventivo, repuestos originales y atención técnica especializada.</p></div>
+</div></div></section>
+<section id="nosotros"><div class="container about"><img src="https://d2u1z1lopyfwlx.cloudfront.net/thumbnails/8baaae7e-b069-5121-98c4-75742970dc97/e0768043-f16d-5667-a3cd-c51a212d68ac.jpg" alt="Asesor joven de Toyota NOA Centro"><div><h2 style="text-align:left">Sobre Toyota NOA Centro</h2><p>Toyota NOA Centro es una concesionaria simulada creada para este proyecto de Administración. Su misión es ofrecer vehículos confiables, atención de calidad y soluciones de movilidad para distintos tipos de clientes.</p><p>Nuestra visión es convertirnos en una concesionaria referente de la zona, destacándose por la transparencia, el servicio postventa y la satisfacción del cliente.</p><a href="#contacto" class="btn">Solicitar información</a></div></div></section>
+<section class="contact" id="contacto"><div class="container"><h2>Contacto</h2><p class="subtitle" style="color:#ccc">Dejanos tus datos y un asesor se comunicará con vos.</p><form onsubmit="alert('¡Gracias! Tu solicitud fue registrada.');return false;"><input type="text" placeholder="Nombre y apellido" required><input type="email" placeholder="Correo electrónico" required><input type="tel" placeholder="Teléfono" required><select required><option value="">Modelo de interés</option><option>Corolla</option><option>Hilux</option><option>Corolla Cross</option><option>Usado seleccionado</option><option>Service técnico</option></select><textarea rows="4" placeholder="Mensaje"></textarea><button class="btn" type="submit">Enviar consulta</button></form></div></section>
+<footer><p><strong>Toyota NOA Centro</strong> — Calle Independencia N.º 245, Santiago del Estero | Tel: 385 302-9806</p><p>Proyecto escolar de Administración. Sitio simulado con fines educativos; no es un concesionario oficial de Toyota.</p></footer>
+<div class="modal" id="modal" onclick="if(event.target===this)closeModal()">
+<div class="modal-box"><button class="close" onclick="closeModal()">&times;</button><h3 id="modal-title"></h3><p><strong>Precio de lista:</strong> <span id="m-price"></span></p><ul><li id="m-disc"></li><li id="m-cuotas"></li><li id="m-extra"></li></ul><p style="font-size:13px;color:#666">Precios simulados con fines educativos. No incluyen gastos de patentamiento, flete ni seguros.</p><button class="btn" onclick="closeModal()">Cerrar</button></div></div>
+<script>
+const datos={
+Corolla:{precio:'$44.082.000',desc:'10% de descuento pagando al contado',cuotas:'12 cuotas sin interés de $3.673.500',extra:'Entrega inmediata y seguro sin cargo durante el primer mes'},
+Hilux:{precio:'$58.500.000',desc:'8% de descuento pagando al contado',cuotas:'18 cuotas sin interés de $3.250.000',extra:'Financiación desde 30% de anticipo'},
+'Corolla Cross':{precio:'$51.918.000',desc:'9% de descuento al contado',cuotas:'15 cuotas sin interés de $3.461.200',extra:'Primer service sin cargo'}
+};
+function openModal(m){const d=datos[m];document.getElementById('modal-title').textContent='Toyota '+m;document.getElementById('m-price').textContent=d.precio;document.getElementById('m-disc').textContent=d.desc;document.getElementById('m-cuotas').textContent=d.cuotas;document.getElementById('m-extra').textContent=d.extra;document.getElementById('modal').classList.add('open');}
+function closeModal(){document.getElementById('modal').classList.remove('open');}
+</script>
+</body>
+</html>
